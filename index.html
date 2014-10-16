@@ -50,7 +50,7 @@
   <div class="grid">
     <!-- Header -->
     <div class="grid__col grid__col--1-of-2 grid__col--centered center">
-      <img class="headshot" src="http://www.gravatar.com/avatar/91255d0a283d7e352e1b6a22b8d0e737?s=500" alt="This is what Neal looks like.">
+      <img id="headshot" class="headshot" src="http://www.gravatar.com/avatar/91255d0a283d7e352e1b6a22b8d0e737?s=500" alt="This is what Neal looks like.">
     </div>
     <div class="grid__col grid__col--1-of-2 grid__col--centered center">
       <h1>Neal&nbsp;Shyam</h1>
@@ -80,6 +80,25 @@
       </div>
     </div>
 
+    <!--<div class="grid__col grid__col--1-of-2 grid__col--centered center">
+      <div class="grid center">
+        <div class="grid__col grid__col--1-of-3 ">
+          <a href="http://dasbrun.ch" title="Subscribe to my brunch reading newsletter."><i class="fa fa-fw fa-4x fa-coffee "></i><h3 class="center">Das Brunch</h3></a>
+          <p>My weekend newsletter will make you smarter.</p>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3 ">
+          <a href="http://challengepost.com/users/nealrs" title="Conduct proximity searches with LegalGrep"><i class="fa fa-fw fa-4x fa-gavel "></i><h3 class="center">LegalGrep</h3></a>
+          <p>Proximity search legal documents.</p>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3 ">
+          <a href="http://tabshare.me" title="Share your tabs with my Chrome extension."><i class="fa fa-fw fa-4x fa-gavel "></i><h3 class="center">tabShare</h3></a>
+          <p>Share your tabs with my Chrome extension.</p>
+        </div>
+      </div>
+    </div>-->
+
     <!-- Social rail-->
     <div class="grid__col grid__col--1-of-3 grid__col--centered socialrail center">
         <a href="mailto:me@nealshyam.com" title="Email Neal Shyam"><i class="fa fa-2x fa-fw fa-at socialpad"></i><a/>
@@ -90,5 +109,12 @@
 
 
   </div>
+  <script src="js/konami.js"></script>
+  <script>
+    var egg = new Konami(function() {
+      var h = document.getElementById('headshot');
+      h.src='img/alt.png';
+      });
+  </script>
 </body>
 </html>

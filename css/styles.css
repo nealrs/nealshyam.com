@@ -2,9 +2,24 @@
   text-align:center;
 }
 
+.right {
+  text-align:left !important;
+}
+
 img {
   border: 0;
 }
+
+/*img.project_img {
+  border: 0;
+  border-radius:0px;
+  height:100px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:5px;
+}*/
 
 a i:hover{
 
@@ -36,10 +51,25 @@ a i {
 }
 
 body {
-  background: url(/img/bg.png) repeat rgb(232, 232, 232);
+  background: url(/img/gplaypattern.png) repeat rgb(232, 232, 232);
   color: #111111;
   padding-top:10px;
   padding-bottom:10px;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    body {
+		background:url(/img/gplaypattern_@2X.png) repeat rgb(232, 232, 232);
+		background-size: 150px 158px;
+
+		/*background:url(/img/gplaypattern_@2X.png) repeat rgb(232, 232, 232);*/
+	}
 }
 
 .socialpad{
