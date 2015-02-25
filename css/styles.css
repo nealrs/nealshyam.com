@@ -6,7 +6,7 @@ body{
   color: #111111;
 }
 
-a {color: #0074D9;}
+a {color: #0074D9; text-decoration: none;}
 a:active, a:hover {color: #FF4136;}
 /*a:visited {color: #85144B;}*/
 
@@ -23,14 +23,31 @@ a:active, a:hover {color: #FF4136;}
 }
 
 ul{
-  margin-left:-.7rem;
+  margin-left:-1.8rem;
+  list-style: none;
 }
 
 li{
-  margin: .5em 0;
+  margin: .8em 0;
+}
+
+li:before {
+    content: "\002022";
+    padding-right:7px;
 }
 
 .highlight{
   background-color: #FF4136;
   padding:4px;
+}
+
+li.solo:before, span.solo{color:#001f3f;}
+li.team:before, span.team{color:#FF851B;}
+li.fulltime:before, span.fulltime{color:#F012BE;}
+li.intern:before, span.intern{color:#2ECC40;}
+
+.section{
+  /*border-left: 4px solid #AAAAAA;
+  padding-left: .5rem;*/
+  font-weight: 600;
 }
