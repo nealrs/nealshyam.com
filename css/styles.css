@@ -43,11 +43,12 @@ li:before {
 
 li.solo:before, span.solo{color:#001f3f;}
 li.team:before, span.team{color:#FF851B;}
-li.fulltime:before, span.fulltime{color:#F012BE;}
+li.school:before, span.school{color:#F012BE;}
 li.intern:before, span.intern{color:#2ECC40;}
 
 .section{
   /*border-left: 4px solid #AAAAAA;
   padding-left: .5rem;*/
   font-weight: 600;
+  /*padding-top:.5rem;*/
 }
