@@ -1,0 +1,90 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+ <meta name="robots" content="none">
+ <meta charset="utf-8">
+ <title>Neal Shyam &middot; Marketer &amp; Hacker</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,400italic' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="../css/styles.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+ <div class="main">
+  <div id="top">
+ 	  <img src="../img/headshot.gif" class="headshot">
+
+    <div id="auth">
+      <h2 class="headline" >My address is a secret</h2>
+      <form>
+        <p>My middle name is: <input class="auth_input" id="fname" type="text" name="name" required></p>
+        <p>My phone number is: <input class="auth_input" id="fphone" type="tel" name="phone" required></p>
+        <br>
+        <a onclick="checkit();" class="auth_button">Gimme dat addy</a>
+      </form>
+        <p id="wrong" class="snippet">Wrong answer!</p>
+    </div>
+
+    <div id="addy">
+      <p class="snippet" id="myaddy"></p>
+      <p>
+       <a class="auth_button" id="myaddymap" href="" target="_blank">Map, directions, etc.</a>
+      </p>
+    </div>
+
+  </div>
+
+ </div>
+
+  <script type="text/javascript" src="../js/sjcl.js"></script>
+  <script>
+    function checkit(){
+        var name = document.getElementById('fname').value;
+        var phone = document.getElementById('fphone').value.replace(/\D/g,'');
+        //console.log(name, phone);
+        var pass = name.toLowerCase().trim()+phone.toString();
+        //console.log(pass);
+
+        var e1 = '{"iv":"UVeuioDMdVSm4RyN1X7xHw==","v":1,"iter":1000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"Cyqgr/kvBRc=","ct":"IgkgjFn+uT1o9bhIuY9JDm8aSmnb1A=="}';
+        var e2 = '{"iv":"GAuEbt2QdhQ6oUgvM9OGgQ==","v":1,"iter":1000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"Cyqgr/kvBRc=","ct":"yHaV4OWJI5NBBNwO2VN21Z434u8Ch6KF4GmfQUVtqMqX5WwSpdWSOEw3ArpSnByuDXtpX6c="}';
+        var e3 = '{"iv":"OhBDRs1BAvy7LNERPP+a/g==","v":1,"iter":1000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"Cyqgr/kvBRc=","ct":"nu1zo++YHLbKkNhm99/2e6uisa8YMdnPeYoW1/JcEUnQ7dFvemsADLrPyIFb2py50iSwdJQunkCI1CHbTymhGOv32BOe2C/Mh+jcRTpTOJxYB5qneP7ej1OIrcOCjalxBJGTCcnjJy18LaOTbfrabE8EAsfMs6nCuhRrWLggS/CGCtU="}';
+
+        // verify decrypt key.
+        try{
+          var d1 = sjcl.decrypt(pass, e1);
+        } catch (err){
+          console.log('you don\'t know me bruh.')
+          document.getElementById('wrong').style.display = "block";
+        }
+
+        if (d1 == "okiedokiepokie"){
+          console.log('decrypt key verified')
+
+          // if key is correct, decrypt address, update html, and unhide addy box.
+          var d2 = sjcl.decrypt(pass, e2);
+          var d3 = sjcl.decrypt(pass, e3);
+          //console.log(d2, d3);
+
+          console.log('ok, i guess you _do_ know me.');
+          document.getElementById('myaddy').innerHTML = d2;
+          document.getElementById('myaddymap').href = d3;
+
+          document.getElementById('auth').style.display = "none";
+          document.getElementById('addy').style.display = "block";
+          document.getElementById('wrong').style.display = "none";
+        }
+
+        window.scrollTo(0,0);
+    }
+  </script>
+
+</body>
+</html>

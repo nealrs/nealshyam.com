@@ -82,10 +82,57 @@ h3{
     padding: 0.3em;
 }
 
+#auth{}
+#addy{
+  display:none;
+}
+#wrong{
+  display:none;
+}
+
+.auth_input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #DDDDDD;
+  padding-left:.25rem;
+  padding-right:.25rem;
+  outline: none;
+  text-align:left;
+  margin:0;
+  font: 20px 'Vollkorn', serif;
+  color: #c31;
+  display:inline;
+  min-width: 1rem;
+}
+
+.auth_button {
+  color:#c31;
+  border:0.15rem solid #c31;
+  padding: .5rem .75rem;
+  border-radius:4px;
+  margin:.5rem;
+  cursor:pointer;
+}
+
+a.auth_button {
+  text-decoration:none;
+}
+
+a.auth_button:hover {
+  color: #fff;
+  background-color:#c31;
+}
+
+
+
 @media screen and (min-width: 0px) and (max-width: 400px) {
   .title:after {
     content: '\00000a';
     white-space: pre-wrap;
+  }
+
+  .auth_input{
+    text-align:center;
   }
 
   .section{

@@ -1,3 +1,4 @@
 .DS_store
 
 OLD STUFF FROM DREAMHOST/
+*node_modules*
