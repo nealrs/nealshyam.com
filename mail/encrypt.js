@@ -14,7 +14,7 @@ var sjcl = require("sjcl");
 var pass = "jessie5558675309";
 
 // test phrase to verify key, street address, and map link
-var d1 = "f00bar"
+var d1 = "f00bar";
 var d2 = "433 West 14th Street, Suite 3F<br>New York, NY 10014"; // leave the <br> in there.
 var d3 = "https://www.google.com/maps/place/433+W+14th+St+%233f,+New+York,+NY+10014/data=!4m2!3m1!1s0x89c259c09cab1123:0xa6beacfb13dbfcb1?sa=X&ved=0ahUKEwif3amt8dLJAhUHKx4KHU4HCuMQ8gEIGzAA";
 
