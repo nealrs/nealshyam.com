@@ -80,6 +80,13 @@ h3{
   font-family: 'Consolas', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     letter-spacing: 0.015em;
     padding: 0.3em;
+
+    font-size: 18px;
+}
+
+.sub:before{
+  content: ' \00B7  ';
+  padding-left: .3rem;
 }
 
 #auth{}
