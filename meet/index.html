@@ -1,0 +1,126 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="robots" content="noindex">
+ <title>Schedule a call with Neal Shyam</title>
+ <meta name="description" content="Neal Shyam is a full stack weirdo from Brooklyn and you can setup a call with him right now.">
+ <meta name="author" content="Neal Shyam">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,400italic' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="css/styles.css">
+
+ <!-- Favicon crap-->
+ <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon-180x180.png">
+ <link rel="icon" type="image/png" href="img/fav/favicon-32x32.png" sizes="32x32">
+ <link rel="icon" type="image/png" href="img/fav/android-chrome-192x192.png" sizes="192x192">
+ <link rel="icon" type="image/png" href="img/fav/favicon-96x96.png" sizes="96x96">
+ <link rel="icon" type="image/png" href="img/fav/favicon-16x16.png" sizes="16x16">
+ <link rel="manifest" href="/manifest2.json">
+ <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+ <meta name="msapplication-TileColor" content="#da532c">
+ <meta name="msapplication-TileImage" content="img/fav/mstile-144x144.png">
+ <meta name="theme-color" content="#ffffff">
+
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- SOCIAL CARDS -->
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@nealrs">
+  <meta name="twitter:title" content="Schedule a call with Neal Shyam">
+  <meta name="twitter:description" content="Neal Shyam is a full stack weirdo from Brooklyn and you can setup a call with him right now.">
+  <meta name="twitter:creator" content="@nealrs">
+  <meta name="twitter:image" content="http://nealshyam.com/img/headshot.gif">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Schedule a call with Neal Shyam" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://www.nealshyam.com/meet" />
+  <meta property="og:image" content="http://nealshyam.com/img/headshot.gif" />
+  <meta property="og:description" content="Neal Shyam is a full stack weirdo from Brooklyn and you can setup a call with him right now." />
+  <meta property="og:site_name" content="nealshyam.com" />
+
+</head>
+<body>
+
+ <div class="main">
+  <div id="top">
+
+    <h2 class="headline">Pick a time to chat</h2>
+
+    <div id="bookingjs">
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdn.timekit.io/booking-js/v1/booking.min.js" defer></script>
+      <script type="text/javascript">
+        window.timekitBookingConfig = {
+          name: 'Neal Shyam',
+          email: 'nealrs@gmail.com',
+          apiToken: 'AYp9H4HFiu6amPGFnsOPpxLS2FTA1QNx',
+          calendar: '6158c70e-126c-40d0-b691-4d19dbc28b10',
+          avatar: 'http://nealshyam.com/img/headshot.gif',
+          showCredits: false,
+
+          timekitFindTime: {
+            future: "2 months",
+            length: '30 minutes',
+            filters: {
+              and: [
+                { "specific_time": {"start": 10, "end": '18:00'} },
+                { 'exclude_weekend': { }}
+              ],
+              or: [
+                {
+                  specific_time: {
+                    start: '00',
+                    end: '12'
+                  }
+                },
+                {
+                  specific_time: {
+                    start: '13',
+                    end: '24'
+                  }
+                }
+              ]
+            }
+          }, bookingFields:{
+              comment: {
+                enabled: false,
+                placeholder: 'What do you want to talk about?',
+                required: false,
+                locked: false
+              },
+              phone: {
+                enabled: true,
+                placeholder: "What number can I reach you at?",
+                required: false,
+                locked: false
+              }/*,
+              location: {
+                enabled: true,
+                prefilled: 'derppp',
+                locked: true,
+                required: false
+              }*/
+          }
+        }
+      </script>
+    </div>
+  </div>
+ </div>
+</body>
+</html>
